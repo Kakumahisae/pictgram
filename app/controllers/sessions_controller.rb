@@ -37,3 +37,6 @@ class SessionsController < ApplicationController
   
   
 end
+
+
+# ユーザー登録関連

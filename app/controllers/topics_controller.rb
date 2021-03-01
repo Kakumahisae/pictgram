@@ -28,3 +28,6 @@ class TopicsController < ApplicationController
   
   
 end
+
+
+# 写真関連

@@ -12,7 +12,10 @@ class User < ApplicationRecord
   
   has_secure_password
   
-  has_many :topics
+  has_many :favorites
+  has_many :favorite_topics, through: :favorites, source: 'topic'
+  
 end
 
-#valid_**_regexはコピペ
+# userは複数の投稿写真topic を持っている
+# userは複数のいいねfavorite を持っている。

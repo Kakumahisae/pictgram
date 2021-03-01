@@ -5,4 +5,9 @@ class Topic < ApplicationRecord
   
   belongs_to :user
   mount_uploader :image, ImageUploader
+  
+  has_many :favorites
+  
 end
+
+# 写真topic には一人のユーザー、いいねfavorite は複数の人がつける？
