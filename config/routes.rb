@@ -13,8 +13,11 @@ Rails.application.routes.draw do
   
   resources :topics
   
+  delete '/favorites', to: 'favorites#destroy'
   get 'favorites/index'
   post '/favorites', to: 'favorites#create'
-  delete 'favorites/:topic_id', to: 'favorites#destroy'
+  
+  
+  #delete 'favorites/:topic_id', to: 'favorites#destroy'
   
 end

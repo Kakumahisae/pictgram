@@ -15,7 +15,7 @@
               <% end %>
             <% else %>
               <%= link_to favorites_path(topic_id: topic.id),method: :delete do %>
-              お気に入り
+              <%= image_tag 'icons/heart-red.png', class: 'topic-index-icon' %>
               <% end %>
             <% end %>
             
