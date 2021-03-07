@@ -19,9 +19,17 @@ class FavoritesController < ApplicationController
   def destroy
     @favorite=Favorite.find_by(user_id: current_user.id, topic_id: params[:topic_id])
     @favorite.destroy
-    flash[:notice] = "いいねを取り消しました"
-    redirect_to("/topics/index")
+    redirect_to topics_path, success: 'いいねを取り消しました'
   end  
   
   
 end
+
+  # なぜか動かなかったdestroyアクション
+  # def destroy
+  #  @favorite=Favorite.find_by(user_id: current_user.id, topic_id: params[:topic_id])
+  #  @favorite.destroy
+  #  flash[:notice] = "いいねを取り消しました"　←　ここから下がなぜかダメだった模様
+  #  redirect_to("/topics/index")                  pathとURLの違いを今一度見直しておく
+  # end  
+  
