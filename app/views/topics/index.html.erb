@@ -17,11 +17,27 @@
               <%= link_to favorites_path(topic_id: topic.id),method: :delete do %>
                 <%= image_tag 'icons/heart-red.png', class: 'topic-index-icon' %>
               <% end %>
+              <!--追加　カウント-->
+              <%= topic.favorite_users.count %>
             <% end %>
             
-            <%= image_tag 'icons/comment.png', class: 'topic-index-icon' %>
+            <!--コメントボタンリンク追加-->
+            <%= link_to new_comment_path(topic_id: topic.id) do %>
+              <%= image_tag 'icons/comment.png', class: 'topic-index-icon' %>
+            <% end %>
+            
             <p class="topic-text">
               <%= topic.description %>
+            
+            <!--コメントeach-->
+            <h5>コメント</h5>
+              <% topic.comments.each do |comment| %>
+                <div class="topic_comment">
+                  <%= comment.comment %>
+                </div>
+              <% end %>  
+              
+              
             </p>
           </div>
         </div>

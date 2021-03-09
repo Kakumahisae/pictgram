@@ -30,6 +30,6 @@ end
   #  @favorite=Favorite.find_by(user_id: current_user.id, topic_id: params[:topic_id])
   #  @favorite.destroy
   #  flash[:notice] = "いいねを取り消しました"　←　ここから下がなぜかダメだった模様
-  #  redirect_to("/topics/index")                  pathとURLの違いを今一度見直しておく
+  #  redirect_to("/topics/index")                  一応見直し済み
   # end  
   
