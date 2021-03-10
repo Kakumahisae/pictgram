@@ -5,12 +5,11 @@
         <h1 class="text-center">コメント投稿</h1>
         
           <%= form_for @comment do |f| %>
+            <%= f.hidden_field :topic_id, value: @comment.topic_id %>
+            <%= f.hidden_field :user_id, value: @comment.user_id %>
             <div class="form-group">
               <% f.label :comment %>
               <%= f.text_area :comment, size: "10x10", class: 'form-control' %>
-              <%= f.hidden_field :topic_id, :value =>params[:topic_id] %>
-              <!-- 上記はなんぞや -->
-              
             </div>
 
            <% if logged_in? %>
