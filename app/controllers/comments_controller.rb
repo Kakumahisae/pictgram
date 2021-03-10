@@ -1,6 +1,8 @@
 class CommentsController < ApplicationController
   def new
     @comment=Comment.new
+    # オンラインサポートで尋ねたところ、user_idを取得していないとだめだった模様。先ほどは上のみ。
+    # 下の二行は追加
     @comment.user_id = current_user.id
     @comment.topic_id = params[:topic_id]
   end
