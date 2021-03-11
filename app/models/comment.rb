@@ -6,3 +6,5 @@ class Comment < ApplicationRecord
   belongs_to :user
   belongs_to :topic
 end
+
+# 継承もとで探すといいよ
