@@ -7,9 +7,9 @@
           <%= form_for @comment do |f| %>
           <!-- 元はhidden_fieldはtopic_idのみだったが、user_idも足した。-->
           <!-- topic_idのみだと、コメントのユーザーを特定できていなかった模様 -->
-          <!-- rails c で見たところ前のコメントにもuser_idが入ってる-->
-            <%= f.hidden_field :topic_id, value: @comment.topic_id %>
+          <!-- 本当に？-->
             <%= f.hidden_field :user_id, value: @comment.user_id %>
+            <%= f.hidden_field :topic_id, value: @comment.topic_id %>
             <div class="form-group">
               <% f.label :comment %>
               <%= f.text_area :comment, size: "10x10", class: 'form-control' %>

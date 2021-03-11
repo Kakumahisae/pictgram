@@ -15,3 +15,5 @@ class Topic < ApplicationRecord
 end
 
 # 写真topic には一人のユーザー、いいねfavorite は複数の人がつける？
+# has_many :favorite_users, through: :favorites, source: 'user'
+# 上のfavorite_usersはfavoritesテーブルを通してuser
