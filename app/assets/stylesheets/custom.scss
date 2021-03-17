@@ -48,7 +48,7 @@ h1, h2 {
 
 .users-new-wrapper {
   width: 100vw;
-  height: 100vh;
+  height: 120vh;
   background-image: image-url('bg-top.png');
   background-position: center center;
   background-repeat: no-repeat;
@@ -57,7 +57,8 @@ h1, h2 {
   background-color: #464646;
 
   .users-new-container {
-    padding-top: 220px;
+    padding-top: 210px;
+    
 
     .form-group {
       margin-bottom: 20px;
